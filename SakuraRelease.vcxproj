@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b1d3b252-49b2-4f13-a162-715c8bee0e9b}</ProjectGuid>
+    <RootNamespace>SakuraRelease</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>D:\Cheats\SakuraHack\SakuraBeta\SakuraRelease\Hook\HookLib;$(LibraryPath)</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SAKURARELEASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SAKURARELEASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SAKURARELEASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>D:\Cheats\SakuraHack\SakuraRelease;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Render\imgui\imgui.cpp" />
+    <ClCompile Include="Render\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Render\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Render\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Render\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Render\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions\Caller.hpp" />
+    <ClInclude Include="Functions\Extractor.hpp" />
+    <ClInclude Include="Header\Header.hpp" />
+    <ClInclude Include="Hook\HookLib\HookLib.h" />
+    <ClInclude Include="Hook\vmthook.h" />
+    <ClInclude Include="Offsets\Offsets.hpp" />
+    <ClInclude Include="Render\font\CloudWorld.h" />
+    <ClInclude Include="Render\font\FA6PRO.h" />
+    <ClInclude Include="Render\font\Icons.h" />
+    <ClInclude Include="Render\font\IconsFontAwesome6.h" />
+    <ClInclude Include="Render\font\Light.h" />
+    <ClInclude Include="Render\font\Regular.h" />
+    <ClInclude Include="Render\Hooks.hpp" />
+    <ClInclude Include="Render\images\logo.h" />
+    <ClInclude Include="Render\images\logotype.h" />
+    <ClInclude Include="Render\Imgui.hpp" />
+    <ClInclude Include="Render\imgui\imconfig.h" />
+    <ClInclude Include="Render\imgui\imgui.h" />
+    <ClInclude Include="Render\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Render\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Render\imgui\imgui_internal.h" />
+    <ClInclude Include="Render\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Render\imgui\imstb_textedit.h" />
+    <ClInclude Include="Render\imgui\imstb_truetype.h" />
+    <ClInclude Include="Render\imgui\stb_image.h" />
+    <ClInclude Include="Render\Menu.hpp" />
+    <ClInclude Include="Render\stb_image.h" />
+    <ClInclude Include="SDK\CActor.h" />
+    <ClInclude Include="SDK\CActorAnimation.h" />
+    <ClInclude Include="SDK\CActorInventory.h" />
+    <ClInclude Include="SDK\CActorSystem.h" />
+    <ClInclude Include="SDK\CCharacterInstance.h" />
+    <ClInclude Include="SDK\CEntity.h" />
+    <ClInclude Include="SDK\CEntityClass.h" />
+    <ClInclude Include="SDK\CEntityIterator.h" />
+    <ClInclude Include="SDK\CEntityProxy.h" />
+    <ClInclude Include="SDK\CEntitySystem.h" />
+    <ClInclude Include="SDK\CGame.h" />
+    <ClInclude Include="SDK\CGameFramework.h" />
+    <ClInclude Include="SDK\CGameObject.h" />
+    <ClInclude Include="SDK\CGameRoom.h" />
+    <ClInclude Include="SDK\CGameRules.h" />
+    <ClInclude Include="SDK\CInventory.h" />
+    <ClInclude Include="SDK\CItemProxy.h" />
+    <ClInclude Include="SDK\CMovementController.h" />
+    <ClInclude Include="SDK\CNetChannel.h" />
+    <ClInclude Include="SDK\COnlineAccount.h" />
+    <ClInclude Include="SDK\COnlineProfile.h" />
+    <ClInclude Include="SDK\CPhysicalWorld.h" />
+    <ClInclude Include="SDK\CRenderer.h" />
+    <ClInclude Include="SDK\CSkeletonPose.h" />
+    <ClInclude Include="SDK\CSpecialMovesRegistry.h" />
+    <ClInclude Include="SDK\CSystem.h" />
+    <ClInclude Include="SDK\CWeapon.h" />
+    <ClInclude Include="SDK\CWeaponGeneral.h" />
+    <ClInclude Include="SDK\CWeaponNetwork.h" />
+    <ClInclude Include="SDK\CWeaponParameters.h" />
+    <ClInclude Include="SDK\CWeaponSettings.h" />
+    <ClInclude Include="SDK\CWorldQuery.h" />
+    <ClInclude Include="SDK\IRMIMessageBody.h" />
+    <ClInclude Include="SDK\Math\Math.h" />
+    <ClInclude Include="SDK\PTBGameRules.h" />
+    <ClInclude Include="SDK\SGameClientHitInfo.h" />
+    <ClInclude Include="SDK\SM_Network.h" />
+    <ClInclude Include="SDK\SSystemGlobalEnvironment.h" />
+    <ClInclude Include="Settings\Sakura.hpp" />
+    <ClInclude Include="Streams\CAimHandler.hpp" />
+    <ClInclude Include="Streams\CGameHandler.hpp" />
+    <ClInclude Include="Streams\CGeneralStream.hpp" />
+    <ClInclude Include="Streams\CSM_Handlers.hpp" />
+    <ClInclude Include="Streams\CVisualHandler.hpp" />
+    <ClInclude Include="Streams\CWeaponHandler.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Hook\HookLib\HookLib.lib" />
+    <Library Include="Hook\HookLib\Zydis.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
